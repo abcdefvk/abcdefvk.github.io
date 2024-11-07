@@ -399,6 +399,7 @@ p {
     height: 100px;
     cursor: pointer;
     font-size: 13px;
+    font-family: 'Times New Roman', Times, serif;
     font-style: oblique;
     padding: 12px 18px;
     border-radius: 8px;
@@ -510,7 +511,7 @@ header {
 }
 
 .evermore-9th {
-    color: rgb(227, 209, 211);
+    color: rgb(255, 140, 155);
     margin-top: -20px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 17px;
