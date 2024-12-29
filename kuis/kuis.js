@@ -368,7 +368,7 @@ function submitQuiz() {
     </tbody>
 </table>
     <div class="result-image">
-        <img style="margin-top:40px; width:60%" src="${imageSrc}" alt="Result Image" />
+        <img style="margin-top:40px; width:70%" src="${imageSrc}" alt="Result Image" />
     </div>
     <div class="chart-container">
         <canvas id="resultChart" width="300" height="300"></canvas>
@@ -488,6 +488,29 @@ function getLevelColor(level) {
             return 'black';
     }
 }
+
+let currentQuestion = 1;
+const totalQuestions = 42;
+
+function updateQuestionProgress() {
+    document.getElementById('question-progress').textContent = `${currentQuestion}/${totalQuestions}`;
+}
+
+document.getElementById('prev').addEventListener('click', () => {
+    if (currentQuestion > 1) {
+        currentQuestion--;
+        updateQuestionProgress();
+    }
+});
+
+document.getElementById('next').addEventListener('click', () => {
+    if (currentQuestion < totalQuestions) {
+        currentQuestion++;
+        updateQuestionProgress();
+    }
+});
+
+document.addEventListener('DOMContentLoaded', updateQuestionProgress);
 
 // Memuat pertanyaan pertama dan memperbarui nomor soal
 loadQuestion(currentQuestionIndex);
