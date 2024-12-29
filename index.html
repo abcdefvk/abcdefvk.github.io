@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to DASS 42 Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a style="color: #e63946;" class="navbar-brand" href="#">
+                <i class="fa-solid fa-heart-pulse"></i> DASS 42 Quiz
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-links navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact/contact.html">Contact</a></li>
+                </ul>
+                <button class="btn-mulai-navbar">
+                    <i class="fas fa-play-circle"></i> Mulai Kuis
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <h2>Apakah Anda ingin memulai kuis?</h2>
+            <div class="modal-buttons">
+                <button id="startQuizYes" class="btn-mulai-navbar">Ya</button>
+                <button id="startQuizNo" class="btn-mulai-navbar">Tidak</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-container">
+        <img class="img1" src="../web-kpti/image/header-img.png" alt="">
+        <div class="home-container">
+            <div class="content">
+                <h1>Selamat Datang di DASS 42 Quiz</h1>
+                <p>
+                    Ukur tingkat stres, kecemasan, dan depresi Anda dengan kuis DASS 42.
+                    Temukan keseimbangan kesehatan mental Anda dengan mudah!
+                </p>
+                <button class="btn-mulai-navbar">
+                    <i class="fas fa-play-circle"></i> Mulai Kuis
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Ambil elemen-elemen yang diperlukan
+        const startQuizButtons = document.querySelectorAll('.btn-mulai-navbar'); // Ambil semua tombol dengan kelas ini
+        const confirmationModal = document.getElementById('confirmationModal');
+        const startQuizYes = document.getElementById('startQuizYes');
+        const startQuizNo = document.getElementById('startQuizNo');
+
+        // Tampilkan modal saat salah satu tombol "Mulai Kuis" diklik
+        startQuizButtons.forEach(button => {
+            button.addEventListener('click', function (event) {
+                event.preventDefault(); // Mencegah tindakan default seperti navigasi langsung
+                confirmationModal.style.display = 'flex'; // Tampilkan modal
+            });
+        });
+
+        // Jika klik "Ya", alihkan ke halaman kuis
+        startQuizYes.addEventListener('click', function () {
+            window.location.href = 'kuis/kuis.html'; // Alihkan ke halaman kuis
+        });
+
+        // Jika klik "Tidak", tutup modal
+        startQuizNo.addEventListener('click', function () {
+            confirmationModal.style.display = 'none'; // Sembunyikan modal
+        });
+    </script>
+
+</body>
+
+</html>

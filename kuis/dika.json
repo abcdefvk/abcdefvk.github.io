@@ -1,0 +1,51 @@
+[{
+        "id": 1,
+        "text": "Menjadi marah karena hal-hal kecil/sepele",
+        "scale": "stress"
+    },
+    {
+        "id": 2,
+        "text": "Mulut terasa kering",
+        "scale": "anxiety"
+    },
+    {
+        "id": 3,
+        "text": "Tidak dapat melihat hal yang positif dari suatu kejadian",
+        "scale": "depression"
+    },
+    {
+        "id": 4,
+        "text": "Merasakan gangguan dalam bernapas (napas cepat, sulit bernapas)",
+        "scale": "anxiety"
+    },
+    {
+        "id": 5,
+        "text": "Merasa sepertinya tidak kuat lagi untuk melakukan suatu kegiatan",
+        "scale": "depression"
+    },
+    {
+        "id": 6,
+        "text": "Cenderung bereaksi berlebihan pada situasi",
+        "scale": "stress"
+    },
+    {
+        "id": 7,
+        "text": "Kelemahan pada anggota tubuh",
+        "scale": "anxiety"
+    },
+    {
+        "id": 8,
+        "text": "Kesulitan untuk relaksasi/bersantai",
+        "scale": "stress"
+    },
+    {
+        "id": 9,
+        "text": "Cemas yang berlebihan dalam suatu situasi namun bisa lega jika hal/situasi itu berakhir",
+        "scale": "anxiety"
+    },
+    {
+        "id": 10,
+        "text": "Pesimis",
+        "scale": "depression"
+    }
+]
