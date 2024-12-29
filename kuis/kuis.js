@@ -367,31 +367,28 @@ function submitQuiz() {
         </tr>
     </tbody>
 </table>
-<div class="result-image">
-    <img style="margin-top:50px; width:45%" src="${imageSrc}" alt="Result Image" />
-</div>
-<div class="chart-container">
-    <canvas id="resultChart" width="300" height="300"></canvas>
-    <canvas id="barChart" width="300" height="300"></canvas>
-</div>
-<button 
-    onclick="window.location.href='../index.html'" 
-    style="padding:8px 18px; font-size:16px; background-color:#e63946; color:white; border:none; border-radius:5px; cursor:pointer;">
-    <i class="fa-solid fa-house"></i> Back to Home
-</button>
-<button 
-    onclick="window.location.href='kuis.html'" 
-    style="padding:8px 18px; font-size:16px; background-color:#4CAF50; color:white; border:none; border-radius:5px; cursor:pointer;margin-top:5px;">
-    <i class="fa-solid fa-rotate-right"></i> Ulang Kuis
-</button>`;
-
+    <div class="result-image">
+        <img style="margin-top:40px; width:60%" src="${imageSrc}" alt="Result Image" />
+    </div>
+    <div class="chart-container">
+        <canvas id="resultChart" width="300" height="300"></canvas>
+        <canvas id="barChart" width="300" height="300"></canvas>
+    </div>
+    <button 
+        onclick="window.location.href='../index.html'" 
+        style="padding:8px 18px; font-size:16px; background-color:#e63946; color:white; border:none; border-radius:5px; cursor:pointer;">
+        <i class="fa-solid fa-house"></i> Back to Home
+    </button>
+    <button 
+        onclick="window.location.href='kuis.html'" 
+        style="padding:8px 18px; font-size:16px; background-color:#4CAF50; color:white; border:none; border-radius:5px; cursor:pointer;margin-top:5px;">
+        <i class="fa-solid fa-rotate-right"></i> Ulang Kuis
+    </button>`;
 
     document.getElementById('quiz').innerHTML = results;
     document.querySelector('.navigation').style.display = 'none';
     document.querySelector('.result').style.display = 'none';
-
     document.getElementById('quiz-navigation').style.display = 'none';
-
 
     // Render Charts
     renderPieChart(scales);
